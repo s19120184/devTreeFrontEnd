@@ -12,6 +12,7 @@ import { useEffect, useState } from "react";
 import DevTreeLink from "./DevTreeLink";
 import { useQueryClient } from "@tanstack/react-query";
 import Header from "./Header";
+import QRCode from "./QRCode";
 
 type DevTreeAdminProps = {
   data: User;
@@ -107,7 +108,8 @@ export default function DevTreeAdmin({ data }: DevTreeAdminProps) {
                   </SortableContext>
                 </div>
               </DndContext>
-            </div>
+              <QRCode url={data.handle}/>
+            </div>   
           </div>
         </main>
       </div>

@@ -23,6 +23,7 @@ export default function ProfileView() {
     const updateProfileMutation= useMutation({
         mutationFn: updatedUser,
         onError:(error)=>{
+            console.log(error.message)
            toast.error(error.message)
         },
         onSuccess:(data)=>{

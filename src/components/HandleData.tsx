@@ -1,4 +1,5 @@
 import { SocialNetwork, userHandle } from "../types";
+import QRCode from "./QRCode";
 
 type PropsHandleData = {
   data: userHandle;
@@ -37,7 +38,8 @@ export default function HandleData({ data }: PropsHandleData) {
         ) : (
           <p className="text-center">No hay enlaces en este perfil</p>
         )}
-      </div>
+        <QRCode url={data.handle}/>
+      </div>  
     </div>
   );
 }

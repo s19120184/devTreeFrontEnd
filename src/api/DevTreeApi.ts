@@ -16,10 +16,12 @@ export const updatedUser = async (user: User) => {
   try {
    
     const { data } = await api.patch<string>("/user", user);
+    
     return data;
   } catch (error) {
     if (isAxiosError(error) && error.response) {
       throw new Error(error.response.data.error);
+    
     }
   }
 };

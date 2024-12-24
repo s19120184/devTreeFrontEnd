@@ -44,9 +44,17 @@ export default function LinkTreeView() {
   }, []);
 
   const handelUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+
     const updatedLinks = devTreeLinks.map((link) =>
       link.name === e.target.name ? { ...link, url: e.target.value } : link
     );
+
+    queryClient.setQueryData(["user"], (prevData: User) => {
+      return {
+        ...prevData, //para no perder los otros datos
+        links: JSON.stringify(updatedLinks) //actualizamos los links
+      };
+    });
 
     setDevTreeLinks(updatedLinks);
 
@@ -126,7 +134,9 @@ export default function LinkTreeView() {
       });
     }
 
-    console.log( updatedItems)
+    const linkUser:User= queryClient.getQueryData(['user'])!
+  
+    console.log(linkUser.handle)
 
     queryClient.setQueryData(["user"], (prevData: User) => {
       return {

@@ -70,7 +70,7 @@ export default function SearchForm() {
       <input
         type="submit"
         className="bg-cyan-400 p-3 text-lg w-full uppercase text-slate-600 rounded-lg font-bold cursor-pointer"
-        value="Obtener mi DevTree"
+        value="Obtener mi RedTree"
       />
     </form>
   );

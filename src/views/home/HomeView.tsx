@@ -15,8 +15,7 @@ export default function HomeView() {
                     En Un enlace
                   </h1>
                   <p className="text-slate-800 text-xl ">
-                    Unete a mas de 200 mil developers compartiendo sus redes sociales, comparte tuperfil de Tiktok, Facebook, Instagra,
-                    Youtube, Github y mas.
+                  Conecta todas tus redes en un solo lugar! Comparte tu mundo con un solo enlace y facilita que te encuentren. 🌐✨ ¡Únete ahora!
                   </p>
                   <SearchForm/>
               </div>

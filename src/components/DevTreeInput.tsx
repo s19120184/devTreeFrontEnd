@@ -7,9 +7,9 @@ type PropsDevTreeInput={
     handelUrlChange: (e: React.ChangeEvent<HTMLInputElement>) => void
     handleEnableLink: (name:string) => void
 }
-export default function DevTreeInput({item, handelUrlChange,handleEnableLink}:PropsDevTreeInput) {
+export default function DevTreeInput({item, handelUrlChange,handleEnableLink}:PropsDevTreeInput) { 
   return (
-    <div className="bg-white shadow-sm p-5 flex items-center gap-3">
+    <div className="bg-white w-72 md:w-full lg:w-full shadow-sm p-5 flex items-center gap-3">
         <div 
         className="w-12 h-12 bg-cover"
             style={{backgroundImage:`url('/social/icon_${item.name}.svg')`}}>
@@ -17,7 +17,7 @@ export default function DevTreeInput({item, handelUrlChange,handleEnableLink}:Pr
         </div>
         <input 
            type="text"
-           className="flex-1 border border-gray-100 "
+           className="flex-1 w-1/2 border border-gray-100 "
            value={item.url}
            onChange={handelUrlChange}
            name={item.name}
