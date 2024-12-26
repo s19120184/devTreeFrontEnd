@@ -72,7 +72,7 @@ export default function ProfileView() {
     }
     return (
         <form 
-            className="bg-white p-10 rounded-lg space-y-5"
+            className="bg-white p-10 rounded-lg space-y-5 w-80 lg:w-full"
             onSubmit={handleSubmit(handleUserProfileForm)}
         >
             <legend className="text-2xl text-slate-800 text-center">Editar Información</legend>
@@ -97,7 +97,7 @@ export default function ProfileView() {
                     htmlFor="description"
                 >Descripción:</label>
                 <textarea
-                    className="border-none bg-slate-100 rounded-lg p-2"
+                    className="border-none h-52 bg-slate-100 rounded-lg p-2"
                     placeholder="Tu Descripción"
                     {...register('description',{
                         required:'La Descripcion es obligatoria'
@@ -122,7 +122,7 @@ export default function ProfileView() {
 
             <input
                 type="submit"
-                className="bg-cyan-400 p-2 text-lg w-full uppercase text-slate-600 rounded-lg font-bold cursor-pointer"
+                className="bg-cyan-400 hover:bg-cyan-600 p-2 text-lg w-full uppercase text-slate-600 rounded-lg font-bold cursor-pointer"
                 value='Guardar Cambios'
             />
         </form>

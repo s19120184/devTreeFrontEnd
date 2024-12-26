@@ -160,7 +160,7 @@ export default function LinkTreeView() {
         />
       ))}
       <button
-        className="bg-cyan-400 p-2 text-lg font-bold w-full uppercase text-slate-600 rounded-lg"
+        className="bg-cyan-400 hover:bg-cyan-500 p-2 text-lg font-bold w-full uppercase text-slate-600 rounded-lg"
         onClick={() => mutate(queryClient.getQueryData(['user'])!)}
       >
         Guardar Cambios

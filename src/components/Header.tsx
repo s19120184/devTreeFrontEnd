@@ -10,11 +10,11 @@ export default function Header() {
 
   return (
     <header className="bg-slate-800 p-5">
-        <div className="mx-auto max-w-2xl flex flex-col md:flex-row items-center  md:justify-between">
-          <div className="w-full p-5 lg:p-0 md:w-1/3">
+        <div className="max-h-10 m-5 flex lg:flex-row flex-shrink items-center  md:justify-between">
+          <div className="w-full  lg:p-0 md:w-1/3">
             <Logo/>
           </div>
-          <nav className="md:w-1/3 md:flex md:justify-end">
+          <nav className="w-full md:w-1/3 flex flex-col items-center md:flex-row md:justify-end">
             {/* mediante la localizacion usamos  distintos elementos */}
              {location.pathname ==='/' ? <HomeNavigation/> :<AdminNavigation />}
              

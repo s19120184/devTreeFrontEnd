@@ -9,15 +9,15 @@ type PropsDevTreeInput={
 }
 export default function DevTreeInput({item, handelUrlChange,handleEnableLink}:PropsDevTreeInput) { 
   return (
-    <div className="bg-white w-72 md:w-full lg:w-full shadow-sm p-5 flex items-center gap-3">
+    <div className="bg-white w-72  lg:w-full  shadow-md p-5 flex items-center gap-2">
         <div 
-        className="w-12 h-12 bg-cover"
+        className="w-8 h-8  lg:w-12 lg:h-12 bg-cover"
             style={{backgroundImage:`url('/social/icon_${item.name}.svg')`}}>
 
         </div>
         <input 
            type="text"
-           className="flex-1 w-1/2 border border-gray-100 "
+           className="flex-1 text-xs lg:text-xl w-1/2 border border-gray-100 "
            value={item.url}
            onChange={handelUrlChange}
            name={item.name}

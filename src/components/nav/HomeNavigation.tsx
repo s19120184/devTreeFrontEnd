@@ -4,13 +4,13 @@ export default function HomeNavigation() {
   return (
     <>
       <Link
-        className="text-white p-2 uppercase font-black text-xs cursor-pointer"
+        className=" text-white p-2 uppercase font-black text-xs cursor-pointer"
         to="/auth/login"
       >
         Iniciar Sesion
       </Link>
       <Link
-        className="bg-lime-500 text-slate-800 p-2 uppercase font-black text-xs cursor-pointer rounded-lg"
+        className="bg-lime-500 hover:bg-lime-400  text-slate-800 p-2 uppercase font-black text-xs cursor-pointer rounded-lg"
         to="/auth/register"
       >
         Registrarme

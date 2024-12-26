@@ -60,7 +60,7 @@ export default function DevTreeAdmin({ data }: DevTreeAdminProps) {
       <Header/>
       
       <div className="bg-gray-100  min-h-screen py-10">
-        <main className="mx-auto max-w-5xl p-10 md:p-0">
+        <main className="lg:mx-auto  max-w-5xl lg:max-w-5xl  p-6 md:p-0">
           {/* componente navigation tabs */}
           <NavigationTabs />
           <div className="flex justify-end">
@@ -70,18 +70,18 @@ export default function DevTreeAdmin({ data }: DevTreeAdminProps) {
               target="_blank"
               rel="noreferrer noopener"
             >
-              Visitar Mi Perfil:/{data.handle}
+              Visitar Mi Perfil:/<span className="text-cyan-600">{data.handle}</span>
             </Link>
           </div>
 
-          <div className="flex flex-col md:flex-row gap-10 mt-10">
-            <div className="flex-1 ">
+          <div className="flex flex-row md:flex-row overflow-y-scroll  gap-2 lg:gap-10 mt-10">
+            <div className="flex-1  ">
               {/* donde se coloca las vistas */}
               <Outlet />
             </div>
             {/* previsualizacion del perfil */}
-            <div className="w-full md:w-96 bg-slate-800 px-5 py-10 space-y-6">
-              <p className=" text-4xl text-white text-center">{data.handle}</p>
+            <div className="w-72 md:w-96 bg-slate-800 px-5 py-10 space-y-6">
+              <p className=" text-2xl text-white text-center">{data.handle}</p>
               {data.image && (
                 <img
                   src={data.image}

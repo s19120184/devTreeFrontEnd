@@ -33,14 +33,14 @@ export default function SearchForm() {
   return (
     <form onSubmit={handleSubmit(handleSubmitForm)} className="space-y-5">
       <div className="relative flex items-center  bg-white  px-2">
-        <label htmlFor="handle">devtree.com/</label>
+        <label htmlFor="handle">Redtree.com/</label>
         <input
           type="text"
           id="handle"
           className="border-none bg-transparent p-2 focus:ring-0 flex-1"
           placeholder="elonmusk, zuck, jeffbezos"
           {...register("handle", {
-            required: "Un Nombre de Usuario es obligatorio"
+            required: "Un handle es obligatorio"
           })}
         />
       </div>

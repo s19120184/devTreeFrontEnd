@@ -8,6 +8,7 @@ import AppLayout from "./layouts/AppLayout";
 import Handle from "./views/handle/Handle";
 import NotFoundView from "./views/404/NotFoundView";
 import HomeView from "./views/home/HomeView";
+import UserLayout from "./layouts/UserLayout";
 
 export default function Router() {
   return (
@@ -30,7 +31,7 @@ export default function Router() {
         <Route path="/"  element={<HomeView/>}/>
 
          {/* ruta para el perfil del usuario */}
-        <Route path="/:handle" element={<AuthLayout/>} >
+        <Route path="/:handle" element={<UserLayout/>} >
                <Route element={<Handle/>} index={true} />
         </Route>
 

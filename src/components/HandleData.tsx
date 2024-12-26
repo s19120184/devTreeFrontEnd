@@ -11,8 +11,8 @@ export default function HandleData({ data }: PropsHandleData) {
   );
 
   return (
-    <div className="space-y-6 text-white">
-      <p className="text-5xl text-center font-black">{data.handle}</p>
+    <div className="space-y-6  text-white">
+      <p className=" text-3xl  lg:text-5xl text-center font-black">{data.handle}</p>
       {data.image && <img src={data.image} className="mx-w[250px] mx-auto" />}
       <p className="text-lg text-center font-bold">{data.description}</p>
       <div className="mt-20 flex flex-col gap-6">
